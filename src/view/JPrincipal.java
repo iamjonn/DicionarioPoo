@@ -7,6 +7,12 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
+import java.awt.List;
+import java.awt.Choice;
+import java.awt.Color;
+import javax.swing.JTree;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class JPrincipal extends JFrame {
 
@@ -44,5 +50,10 @@ public class JPrincipal extends JFrame {
 		JButton btnNewButton = new JButton("New button");
 		btnNewButton.setBounds(106, 189, 89, 23);
 		contentPane.add(btnNewButton);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"ingles", "espanhol", "alemao"}));
+		comboBox.setBounds(241, 63, 145, 22);
+		contentPane.add(comboBox);
 	}
 }
