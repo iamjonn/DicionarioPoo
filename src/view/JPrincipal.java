@@ -18,6 +18,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
+import java.awt.Font;
 
 public class JPrincipal extends JFrame {
 
@@ -48,6 +49,7 @@ public class JPrincipal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 699, 481);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(42, 42, 42));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -89,7 +91,9 @@ public class JPrincipal extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("DIGITE A PALAVRA  QUE QUER TRADUZIR");
-		lblNewLabel_1.setBounds(69, 11, 535, 39);
+		lblNewLabel_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 22));
+		lblNewLabel_1.setBounds(106, 33, 473, 39);
 		contentPane.add(lblNewLabel_1);
 	}
 }
