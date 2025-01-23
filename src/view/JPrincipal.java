@@ -60,13 +60,27 @@ public class JPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton.setBounds(133, 185, 147, 23);
+		btnNewButton.setBounds(133, 185, 169, 23);
 		contentPane.add(btnNewButton);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"ingles", "espanhol", "alemao"}));
-		comboBox.setBounds(241, 147, 75, 22);
+		comboBox.setBounds(241, 147, 94, 22);
 		contentPane.add(comboBox);
+		
+		
+        // Adiciona o ActionListener ao JComboBox
+		
+        Controller controller = new Controller(); // Instancia o controlador
+        comboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String selectedLanguage = (String) comboBox.getSelectedItem();
+                controller.updateImage(imageLabel, selectedLanguage + ".png");
+            }
+        });
+
+        setVisible(true);
 		
 		JButton btnNewButton_1 = new JButton("traduzir para ");
 		btnNewButton_1.addActionListener(new ActionListener() {
