@@ -10,7 +10,7 @@ public class Controller {
             ImageIcon icon = new ImageIcon(getClass().getResource("/" + imagePath));
             Image scaledImage = icon.getImage().getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_SMOOTH);
             label.setIcon(new ImageIcon(scaledImage));
-            label.setText(""); // Remove texto, se houver
+            label.setText(""); // Remove texto
         } catch (Exception ex) {
             label.setText("Imagem não encontrada: " + imageName);
             label.setIcon(null);
