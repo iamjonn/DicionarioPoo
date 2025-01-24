@@ -56,19 +56,19 @@ public class JPrincipal extends JFrame {
         contentPane.setLayout(null);
 
         // Botão de tradução para português
-        JButton btnNewButton = new JButton("traduzir para portugues");
+        JButton btnNewButton = new JButton("traduzir");
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Lógica de tradução pode ser implementada aqui
             }
         });
-        btnNewButton.setBounds(133, 185, 169, 23);
+        btnNewButton.setBounds(127, 181, 169, 23);
         contentPane.add(btnNewButton);
 
         // ComboBox para selecionar idiomas
         JComboBox<String> comboBox = new JComboBox<>();
         comboBox.setModel(new DefaultComboBoxModel<>(new String[] { "ingles", "espanhol", "alemao" }));
-        comboBox.setBounds(241, 147, 94, 22);
+        comboBox.setBounds(221, 148, 95, 22);
         contentPane.add(comboBox);
 
         // JLabel para exibir a imagem
@@ -88,18 +88,20 @@ public class JPrincipal extends JFrame {
         });
 
         // Botão de tradução para outro idioma
-        JButton btnNewButton_1 = new JButton("traduzir para ");
+        JButton btnNewButton_1 = new JButton("BUSCAR");
+        btnNewButton_1.setToolTipText("");
+        btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 11));
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Lógica de tradução pode ser implementada aqui
             }
         });
-        btnNewButton_1.setBounds(69, 147, 162, 23);
+        btnNewButton_1.setBounds(465, 83, 79, 36);
         contentPane.add(btnNewButton_1);
 
         // Campo de texto para entrada do usuário
         textField = new JTextField();
-        textField.setBounds(170, 83, 329, 36);
+        textField.setBounds(116, 83, 350, 36);
         contentPane.add(textField);
         textField.setColumns(10);
 
@@ -114,5 +116,11 @@ public class JPrincipal extends JFrame {
         lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 22));
         lblNewLabel_1.setBounds(106, 33, 473, 39);
         contentPane.add(lblNewLabel_1);
+        
+        JLabel lblNewLabel_1_1 = new JLabel("Selecione o idioma:");
+        lblNewLabel_1_1.setForeground(Color.WHITE);
+        lblNewLabel_1_1.setFont(new Font("Times New Roman", Font.BOLD, 18));
+        lblNewLabel_1_1.setBounds(64, 141, 158, 33);
+        contentPane.add(lblNewLabel_1_1);
     }
 }
